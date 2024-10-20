@@ -8,13 +8,13 @@ function Filter({filterData,category,setCategory}) {
   }
   
   return (
-    <div className='flex justify-center my-4 gap-2'>
+    <div className='flex justify-center my-4 gap-2 w-full'>
       {
         filterData.map((filter)=>{
           return (
             <button
               onClick={()=>filterHandler(filter.title)}
-              className={`px-3 py-1 rounded-md bg-bgDark text-white border
+              className={`px-1 lg:px-3 text-xs lg:text-base py-1 rounded-md bg-bgDark text-white border
               ${category===filter.title?"bg-opacity-60 border-white":"bg-opacity-40 border-transparent"}`}
               key={filter.id}>
               {filter.title}
